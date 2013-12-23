@@ -3,7 +3,7 @@
   "description": "gulp plugin for esmangle minifying task",
   "homepage": "https://github.com/Constellation/gulp-esmangle",
   "main": "index.js",
-  "version": "0.0.1-dev",
+  "version": "0.0.1",
   "engines": {
     "node": ">=0.10.0"
   },
