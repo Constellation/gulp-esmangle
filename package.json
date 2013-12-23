@@ -1,0 +1,45 @@
+{
+  "name": "gulp-esmangle",
+  "description": "gulp plugin for esmangle minifying task",
+  "homepage": "https://github.com/Constellation/gulp-esmangle",
+  "main": "index.js",
+  "version": "0.0.1-dev",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "maintainers": [
+    {
+      "name": "Yusuke Suzuki",
+      "email": "utatane.tea@gmail.com",
+      "web": "http://github.com/Constellation"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/Constellation/gulp-esmangle.git"
+  },
+  "dependencies": {
+    "esmangle": "~ 0.0.17",
+    "esprima": "~1.0.4",
+    "escodegen": "~1.0.1",
+    "event-stream": "~3.0.20"
+  },
+  "devDependencies": {
+    "gulp": "~3.2.1",
+    "chai": "~1.8.1",
+    "mocha": "~1.16.1",
+    "clone": "~0.1.11",
+    "jshint": "=2.3.0"
+  },
+  "licenses": [
+    {
+      "type": "BSD",
+      "url": "http://github.com/Constellation/gulp-esmangle/raw/master/LICENSE.BSD"
+    }
+  ],
+  "scripts": {
+    "test": "npm run-script lint && npm run-script unit-test",
+    "lint": "jshint **/*.js",
+    "unit-test": "mocha"
+  }
+}
