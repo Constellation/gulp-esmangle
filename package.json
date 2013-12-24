@@ -22,13 +22,13 @@
     "esmangle": "~ 0.0.17",
     "esprima": "~1.0.4",
     "escodegen": "~1.0.1",
+    "clone": "~0.1.11",
     "event-stream": "~3.0.20"
   },
   "devDependencies": {
     "gulp": "~3.2.1",
     "chai": "~1.8.1",
     "mocha": "~1.16.1",
-    "clone": "~0.1.11",
     "jshint": "=2.3.0"
   },
   "licenses": [
