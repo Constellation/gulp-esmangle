@@ -11,12 +11,12 @@
     {
       "name": "Yusuke Suzuki",
       "email": "utatane.tea@gmail.com",
-      "web": "http://github.com/Constellation"
+      "web": "https://github.com/Constellation"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/Constellation/gulp-esmangle.git"
+    "url": "https://github.com/Constellation/gulp-esmangle.git"
   },
   "dependencies": {
     "esmangle": "~ 0.0.17",
@@ -34,7 +34,7 @@
   "licenses": [
     {
       "type": "BSD",
-      "url": "http://github.com/Constellation/gulp-esmangle/raw/master/LICENSE.BSD"
+      "url": "https://github.com/Constellation/gulp-esmangle/raw/master/LICENSE.BSD"
     }
   ],
   "scripts": {
