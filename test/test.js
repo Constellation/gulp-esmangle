@@ -29,7 +29,7 @@ var fs = require('fs'),
     gulp = require('gulp'),
     expect = require('chai').expect,
     minify = require('../index.js'),
-    es = require('event-stream');
+    map = require('map-stream');
 
 describe('gulp-esmangle minification', function () {
     describe('gulp-esmangle', function () {
@@ -37,7 +37,7 @@ describe('gulp-esmangle minification', function () {
             var filename = path.join(__dirname, './fixtures/escodegen.js');
             gulp.src(filename)
                 .pipe(minify())
-                .pipe(es.map(function (file) {
+                .pipe(map(function (file) {
                     var expected = minify.minify(fs.readFileSync(filename, 'utf-8'));
                     expect(String(file.contents)).to.equal(expected);
                     done();
@@ -48,7 +48,7 @@ describe('gulp-esmangle minification', function () {
             var filename = path.join(__dirname, './fixtures/escodegen.js');
             gulp.src(filename)
                 .pipe(minify())
-                .pipe(es.map(function (file) {
+                .pipe(map(function (file) {
                     expect(file.contents).to.be.an.instanceof(Buffer);
                     done();
                 }));

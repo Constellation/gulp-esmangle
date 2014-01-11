@@ -23,7 +23,7 @@
     "esprima": "~1.0.4",
     "escodegen": "~1.0.1",
     "clone": "~0.1.11",
-    "event-stream": "~3.0.20"
+    "map-stream": "~0.1.0"
   },
   "devDependencies": {
     "gulp": "~3.2.1",

@@ -25,7 +25,7 @@
 (function () {
     'use strict';
 
-    var es = require('event-stream'),
+    var map = require('map-stream'),
         esprima = require('esprima'),
         esmangle = require('esmangle'),
         escodegen = require('escodegen'),
@@ -74,7 +74,7 @@
     }
 
     module.exports = function (opt) {
-        return es.map(function (file, callback) {
+        return map(function (file, callback) {
             try {
                 file.contents = new Buffer(minify(String(file.contents), opt));
             } catch(e) {
