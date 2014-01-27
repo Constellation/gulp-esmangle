@@ -32,7 +32,7 @@
         clone = require('clone');
 
     function minify(code, options) {
-        var tree, licenses, formatOption;
+        var tree, licenses, condition, formatOption;
 
         options = options || {};
 
@@ -45,8 +45,13 @@
         });
 
         if (options.license) {
+            if (!options.licenseRegExp) {
+                condition = /@(?:license|preserve)|copyright/i;
+            } else {
+                condition = options.licenseRegExp;
+            }
             licenses = tree.comments.filter(function (comment) {
-                return (/@(?:license|preserve)|copyright/i).test(comment.value);
+                return (condition).test(comment.value);
             });
         } else {
             licenses = [];
