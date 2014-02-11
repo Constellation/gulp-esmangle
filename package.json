@@ -19,11 +19,11 @@
     "url": "https://github.com/Constellation/gulp-esmangle.git"
   },
   "dependencies": {
-    "esmangle": "~ 0.0.17",
-    "esprima": "~1.0.4",
-    "escodegen": "~1.0.1",
     "clone": "~0.1.11",
-    "map-stream": "~0.1.0"
+    "map-stream": "~0.1.0",
+    "esprima": "~1.0.4",
+    "escodegen": "~1.2.0",
+    "esmangle": "~1.0.0"
   },
   "devDependencies": {
     "gulp": "~3.2.1",
