@@ -11,12 +11,24 @@ Node.js application via the package manager:
 ### Usage
 
     var esmangle = require('gulp-esmangle');
+    var options = {
+        // [optional] save license comment (default false)
+        license: true,
+
+        // [optional] license comment RegExp (default /@(?:license|preserve)|copyright/i)
+        licenseRegExp: /@(?:license|preserve)|copyright/i,
+
+        // [optional] support legacy (<= IE8) browser (default: true)
+        legacy: true
+    };
 
     gulp.task('minify', function() {
       gulp.files('./lib/*.js')
-        .pipe(esmangle())
+        .pipe(esmangle(options))
         .pipe(gulp.folder('./dist/'))
     });
+
+### Options
 
 ### License
 

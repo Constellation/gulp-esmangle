@@ -32,7 +32,7 @@
         clone = require('clone');
 
     function minify(code, options) {
-        var tree, licenses, condition, formatOption;
+        var tree, licenses, legacy, condition, formatOption;
 
         options = options || {};
 
@@ -57,10 +57,16 @@
             licenses = [];
         }
 
+        legacy = true;
+        if (options.legacy != null) {
+            legacy = options.legacy;
+        }
+
         tree = esmangle.optimize(tree, null, {
             destructive: true,
             directive: true,
-            preserveCompletionValue: false
+            preserveCompletionValue: false,
+            legacy: legacy
         });
         tree = esmangle.mangle(tree, {
             destructive: true
